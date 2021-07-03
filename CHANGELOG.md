@@ -28,7 +28,7 @@ All notable changes to this project will be documented in this file.
 - Updated sample payloads
 - Added Phases table component
 - Added docker support
-- Published docker image to Docker Hub, name: `artilleryio/report-viewer`
+- Published docker image to Docker Hub, name: `cfryerdev/artilleryio-report-viewer`
 - Added more styles to metrics-by-endpoint addon
 - Cleaned up print view (save as pdf)
 - Standardized all components and pages to Fast Refresh requirements
