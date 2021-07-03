@@ -148,3 +148,7 @@ Quickly jump from section to section easily.
 ## Remote Loading
 Want to upload your report and share it with somebody else? You can do that using the remote loading functionality.
 ![Screenshot03](/samples/ScreenShot_008.png)
+
+## OpenAPI
+Fully documented open api spec using swagger!
+![Screenshot03](/samples/ScreenShot_009.png)
