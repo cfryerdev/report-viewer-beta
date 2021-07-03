@@ -178,11 +178,11 @@ const Summary = () => {
                             <p className="card-category">Health &amp; Performance</p>
                             <h3 className="card-title">
                                 {isLoaded && 
-                                    `${getHealthyStatusText(healthRating)} - ${'Fast'}`
+                                    `${getHealthyStatusText(healthRating)}`
                                 }
                             </h3>
                         </div>
-                        <div className="card-footer">
+                        {/* <div className="card-footer">
                             <div className="stats">
                                 Estimated health and performance
                             </div>
@@ -193,7 +193,7 @@ const Summary = () => {
                                     {Array(getEmptyStars()).fill(<i className="far fa-star text-muted"></i>)}
                                 </span>
                             }
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
