@@ -1,9 +1,13 @@
-import React from "react";
+import Layout from "../layout";
 
 const NotFoundPage = () => {
-  return <div className="mt-4 text-center">
-    Oops, looks like we cant find what you are looking for.
-  </div>
+  return (
+    <Layout>
+      <div className="text-center">
+        Oops, we could not find what you are looking for.
+      </div>
+    </Layout>
+  )
 }
 
 export default NotFoundPage;
