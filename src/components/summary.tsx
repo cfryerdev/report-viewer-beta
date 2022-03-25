@@ -57,10 +57,10 @@ const Summary = () => {
         setPerfRating(rating);
     };
     const getFilledStars = () => {
-        return 3;
+        return 0;
     };
     const getEmptyStars = () => {
-        return 2;
+        return 5;
     };
     useEffect(() => {
         calculateHealthRating();
@@ -177,23 +177,28 @@ const Summary = () => {
                             </div>
                             <p className="card-category">Health &amp; Performance</p>
                             <h3 className="card-title">
-                                {isLoaded && 
+                                {/* {isLoaded && 
                                     `${getHealthyStatusText(healthRating)}`
-                                }
+                                } */}
+                                Coming soon.
                             </h3>
                         </div>
-                        {/* <div className="card-footer">
+                        <div className="card-footer">
                             <div className="stats">
                                 Estimated health and performance
                             </div>
-                            { isLoaded && 
+                            {/* { isLoaded && 
                                 <span className="float-right">
                                     <span className="stats pr-3">Overall Rating:</span>
                                     {Array(getFilledStars()).fill(<i className="fas fa-star text-warning"></i>)}
                                     {Array(getEmptyStars()).fill(<i className="far fa-star text-muted"></i>)}
                                 </span>
-                            }
-                        </div> */}
+                            } */}
+                            <span className="float-right">
+                                <span className="stats pr-3">Overall Rating:</span>
+                                {Array(getEmptyStars()).fill(<i className="far fa-star text-muted"></i>)}
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
