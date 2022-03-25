@@ -5,7 +5,7 @@ const HealthPage = () => {
   return (
     <Layout>
       <div className="text-center">
-        Version: {pkg.version}
+        Version: {pkg.version}-slim
       </div>
     </Layout>
   )
