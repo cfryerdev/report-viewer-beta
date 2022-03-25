@@ -3,7 +3,7 @@ import ReportPayload from "../models/report-payload";
 import ReportState from "../models/report-state";
 import { mapToLegacyObject } from "../utilities/mapper";
 
-const ReportContext = React.createContext(new ReportState(()=>{},()=>{},()=>{},false));
+const ReportContext = React.createContext(new ReportState(()=>{},()=>{},false));
 
 const ReportProvider = ({ payloadFile, children }) => {
   
@@ -16,22 +16,6 @@ const ReportProvider = ({ payloadFile, children }) => {
 
   const resetReport = () => {
     setViewerState(defaultState());
-  };
-
-  const loadFromUrl = (url)  => {
-    if (url && url !== 'undefined') {
-      fetch(`http://localhost:8080/api/loader/${url}`)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error(`Network error: (${response.url}) ${response.status} - ${response.statusText}`);
-          }
-          return response;
-        })
-        .then(res => res.json())
-        .then(response => {
-          loadReport(response, decodeURIComponent(url));
-        });
-    }
   };
 
   const loadReport = (jsonData: ReportPayload, fileName: String) => {
@@ -55,7 +39,6 @@ const ReportProvider = ({ payloadFile, children }) => {
     return new ReportState(
       loadReport,
       resetReport,
-      loadFromUrl,
       false
     );
   };
@@ -77,7 +60,6 @@ const ReportProvider = ({ payloadFile, children }) => {
         hasCustomMetrics: viewerState.hasCustomMetrics,
         loadReport,
         resetReport,
-        loadFromUrl
       }}
     >
       {children}

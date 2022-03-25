@@ -5,7 +5,6 @@ export default class ReportState {
   hasCustomMetrics: Boolean;
   isLoaded: Boolean;
   resetReport: Function;
-  loadFromUrl: Function;
   report?: {
     name: String,
     version: Number,
@@ -15,12 +14,10 @@ export default class ReportState {
   constructor(
     _loadReport: Function,
     _resetReport: Function,
-    _loadFromUrl: Function,
     _hasCustomMetrics: Boolean
   ) {
     this.loadReport = _loadReport;
     this.resetReport = _resetReport;
-    this.loadFromUrl = _loadFromUrl;
     this.hasCustomMetrics = false; 
     this.isLoaded = false; 
     const obj = {
